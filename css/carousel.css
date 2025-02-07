@@ -1,0 +1,186 @@
+@import url("./styles.css");
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.carousel {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-main {
+  position: relative;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+
+.carousel-slides {
+  display: block;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+.carousel-slide {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  transition: all var(--transDurLong) ease-in-out;
+}
+
+.carousel-slide.active {
+  display: flex;
+}
+
+.carousel-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-prev,
+.carousel-next,
+.carousel-prev-selector,
+.carousel-next-selector {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  height: fit-content;
+  margin: auto;
+  padding: 8px;
+
+  background: none;
+  transition: var(--transAll);
+  animation: fade var(--transDur);
+}
+
+.carousel-next-selector,
+.carousel-prev-selector {
+  height: 100%;
+}
+
+.carousel-prev-selector {
+  background-image: linear-gradient(
+    to left,
+    var(--primaryBgTransparent),
+    var(--primaryBg)
+  );
+}
+
+.carousel-next-selector {
+  background-image: linear-gradient(
+    to right,
+    var(--primaryBgTransparent),
+    var(--primaryBgAlpha),
+    var(--primaryBg)
+  );
+}
+
+.carousel-main:is(:hover, :focus)
+  :is(.carousel-prev, .carousel-next):not(:disabled),
+:is(.carousel-prev-selector, .carousel-next-selector):not(:disabled) {
+  display: block;
+}
+
+:is(
+    .carousel-prev,
+    .carousel-next,
+    .carousel-prev-selector,
+    .carousel-next-selector
+  )
+  svg {
+  width: 16px;
+  filter: drop-shadow(var(--primaryBgDark) 0 2px 4px);
+}
+
+:is(.carousel-prev-selector, .carousel-next-selector) svg {
+  margin-bottom: 4px;
+}
+
+:is(
+    .carousel-prev,
+    .carousel-next,
+    .carousel-prev-selector,
+    .carousel-next-selector
+  ):not(:disabled):is(:hover) {
+  color: var(--accentFg);
+  cursor: pointer;
+}
+
+.carousel-prev,
+.carousel-prev-selector {
+  left: 0;
+}
+
+.carousel-next,
+.carousel-next-selector {
+  right: 0;
+}
+
+.carousel-controls {
+  position: relative;
+  margin: 8px 0 0 0;
+}
+
+.carousel-selectors {
+  display: flex;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+
+  gap: 8px;
+  list-style-type: none;
+  align-items: start;
+  justify-content: left;
+}
+
+.carousel-selector {
+  box-sizing: content-box;
+  height: 64px;
+  overflow: hidden;
+  flex-shrink: 0;
+
+  aspect-ratio: 16/9;
+  opacity: 0.5;
+  border-bottom: 4px solid var(--primaryBgTransparent);
+  transition: var(--transAll);
+}
+
+.carousel-selector:not(.active) {
+  cursor: pointer;
+}
+
+.carousel-selector img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+
+  transition: all var(--transDurLong) ease-in-out;
+}
+
+.carousel-selector:is(:hover, :focus, .active) {
+  opacity: 1;
+}
+
+.carousel-selector.active {
+  border-color: var(--accentBg);
+}
+
+.carousel-selector:not(:active):is(:hover, :focus) img,
+.carousel-selector.active img {
+  transform: scale(1.1);
+}

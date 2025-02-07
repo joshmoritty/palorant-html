@@ -1,0 +1,39 @@
+@import url(./styles.css);
+
+.section h2 {
+  font-size: 54px;
+}
+
+#header-content {
+  flex-direction: row;
+  align-items: center;
+  gap: 64px;
+}
+
+#header-minimap {
+  z-index: 5;
+}
+
+#header-minimap-img {
+  --cornerClipAmt: 64px;
+  max-width: 480px;
+  clip-path: polygon(
+    0 var(--cornerClipAmt),
+    calc(sin(var(--skewAmt)) * -1 * var(--cornerClipAmt)) 0,
+    100% 0,
+    100% calc(100% - var(--cornerClipAmt)),
+    calc(100% - sin(var(--skewAmt)) * -1 * var(--cornerClipAmt)) 100%,
+    0 100%
+  );
+}
+
+#images .section-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#images .carousel {
+  max-width: 720px;
+}

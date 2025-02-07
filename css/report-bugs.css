@@ -1,0 +1,81 @@
+@import url(./styles.css);
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-section label {
+  font-size: 20px;
+}
+
+.form-section:not(.checkbox) label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.form-section :is(input, textarea, select) {
+  padding: 8px;
+
+  border: solid var(--borderSize) var(--primaryBgLight);
+  font-size: 20px;
+  font-family: inherit;
+
+  color: var(--primaryFg);
+  background-color: var(--primaryBgDark);
+  transition: var(--transAll);
+}
+
+.form-section :is(input[type="text"], input[type="email"], select) {
+  width: 100%;
+  max-width: 320px;
+}
+
+.form-section :is(textarea) {
+  width: 100%;
+  max-width: 640px;
+  height: 200px;
+  resize: none;
+}
+
+.form-section :is(input, textarea, select).error {
+  border-color: var(--errorFg);
+}
+
+.form-section :is(input, textarea, select):focus {
+  outline: none;
+  border-color: var(--accentBg);
+}
+
+.form-section input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+}
+
+.error-message {
+  max-height: 0;
+  margin: 0;
+  padding-top: 8px;
+  overflow: hidden;
+
+  color: var(--errorFg);
+}
+
+.error-message::before {
+  content: url("../resources/img/triangle-exclamation-solid.svg");
+  display: inline-block;
+  width: 16px;
+  vertical-align: text-top;
+  margin-right: 8px;
+}
+
+.error-message.visible {
+  max-height: 32px;
+}
+
+.optional::after {
+  content: " (optional)";
+  color: var(--primaryFgDark);
+}

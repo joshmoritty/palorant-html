@@ -1,0 +1,10 @@
+@import url(./styles.css);
+
+.maps-container {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.map h2 {
+  font-size: 32px;
+  margin: 0;
+}

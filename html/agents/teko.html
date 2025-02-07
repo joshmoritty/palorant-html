@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teko - PALORANT</title>
+    <link rel="stylesheet" href="../../css/agent.css" />
+    <script src="../../js/abilities-container.js" async></script>
+    <link rel="icon" href="../../resources/img/favicon.ico" sizes="any" />
+    <link
+      rel="icon"
+      href="../../resources/img/favicon.svg"
+      type="image/svg+xml"
+    />
+  </head>
+  <body>
+    <header id="top-nav">
+      <a href="../index.html" id="top-nav-logotype">
+        <img src="../../resources/img/PalorantLogotype.svg" height="24px" />
+      </a>
+      <nav>
+        <a href="../agents.html" class="button">
+          <span>AGENTS</span>
+        </a>
+        <a href="../maps.html" class="button">
+          <span>MAPS</span>
+        </a>
+        <a href="../news.html" class="button">
+          <span>NEWS</span>
+        </a>
+        <a href="../report-bugs.html" class="button">
+          <span>REPORT BUGS</span>
+        </a>
+      </nav>
+    </header>
+    <main>
+      <header>
+        <div id="header-content">
+          <div id="header-panel">
+            <img
+              id="header-panel-logomark"
+              src="../../resources/img/PalorantLogogram.svg"
+            />
+          </div>
+          <div id="header-agent">
+            <img
+              id="header-agent-img"
+              src="../../resources/img/agents/Tejo_Artwork_Full.webp"
+            />
+          </div>
+          <h1>TEKO</h1>
+          <div id="agent-class">
+            <div id="agent-class-content">
+              <img
+                src="../../resources/img/agents/InitiatorClassSymbolDark.webp"
+              />
+              <div>
+                <div>ROLE</div>
+                <div id="agent-role-text">INITIATOR</div>
+              </div>
+            </div>
+          </div>
+          <p>
+            A veteran intelligence consultant from Colombia, Teko's ballistic
+            guidance system pressures the enemy to relinquish their ground - or
+            their lives. His targeted strikes keep opponents off balance and
+            under his heel.
+          </p>
+        </div>
+      </header>
+      <section class="section">
+        <div id="abilities-container">
+          <h2 id="abilities-header">ABILITIES</h2>
+          <div id="abilities-main">
+            <div id="abilities-buttons">
+              <button
+                id="ability-1-button"
+                class="button ability-button active"
+                disabled
+              >
+                <div>
+                  <img
+                    src="../../resources/img/agents/teko/Stealth_Drone.webp"
+                  />
+                  STEALTH DRONE
+                </div>
+              </button>
+              <button id="ability-2-button" class="button ability-button">
+                <div>
+                  <img
+                    src="../../resources/img/agents/teko/Special_Delivery.webp"
+                  />
+                  SPECIAL DELIVERY
+                </div>
+              </button>
+              <button id="ability-3-button" class="button ability-button">
+                <div>
+                  <img
+                    src="../../resources/img/agents/teko/Guided_Salvo.webp"
+                  />
+                  GUIDED SALVO
+                </div>
+              </button>
+              <button id="ability-4-button" class="button ability-button">
+                <div>
+                  <img src="../../resources/img/agents/teko/Armageddon.webp" />
+                  ARMAGEDDON
+                </div>
+              </button>
+            </div>
+            <div id="abilities-content">
+              <div id="ability-1" class="ability-content active">
+                <video
+                  src="../../resources/video/agents/teko/Stealth_Drone.mp4"
+                  autoplay
+                  muted
+                  loop
+                ></video>
+                <p>
+                  EQUIP a stealth drone. FIRE to throw the drone forward,
+                  assuming direct control of its movement. FIRE again to trigger
+                  a pulse that Suppresses and Reveals enemies hit.
+                </p>
+              </div>
+              <div id="ability-2" class="ability-content">
+                <video
+                  src="../../resources/video/agents/teko/Special_Delivery.mp4"
+                  autoplay
+                  muted
+                  loop
+                ></video>
+                <p>
+                  EQUIP a sticky grenade. FIRE to launch. The grenade sticks to
+                  the first surface it hits and explodes, Concussing any targets
+                  caught in the blast. ALT FIRE to launch the grenade with a
+                  single bounce instead.
+                </p>
+              </div>
+              <div id="ability-3" class="ability-content">
+                <video
+                  src="../../resources/video/agents/teko/Guided_Salvo.mp4"
+                  autoplay
+                  muted
+                  loop
+                ></video>
+                <p>
+                  EQUIP an AR targeting system. FIRE to select up to two target
+                  locations on the map. ALT FIRE to launch missiles that
+                  autonomously navigate to target locations, detonating on
+                  arrival.
+                </p>
+              </div>
+              <div id="ability-4" class="ability-content">
+                <video
+                  src="../../resources/video/agents/teko/Armageddon.mp4"
+                  autoplay
+                  muted
+                  loop
+                ></video>
+                <p>
+                  EQUIP a tactical strike targeting map. FIRE to select the
+                  origin point of the strike. FIRE again to set the end point
+                  and launch the attack, unleashing a wave of explosions along
+                  the strike path. ALT FIRE during map targeting to cancel the
+                  origin point.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div>
+        <p>GIOT GAMES</p>
+        <p>Los Angeles, California</p>
+      </div>
+      <div id="inspiration">
+        <p>Inspired by VALORANT by RIOT GAMES.</p>
+        <p>All game assets and gameplay footage courtesy of Riot Games, Inc.</p>
+      </div>
+    </footer>
+  </body>
+</html>

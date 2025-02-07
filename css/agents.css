@@ -1,0 +1,52 @@
+@import url(./styles.css);
+
+.agents-container {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.agent .card-img {
+  background-color: var(--primaryBgMedium);
+  height: 300px;
+
+  align-items: start;
+  padding-top: 32px;
+}
+
+.agent .card-img img {
+  width: 180%;
+}
+
+.agent .card-img::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 0%;
+  left: -17%;
+  top: 0;
+  z-index: 0;
+
+  background-color: var(--primaryBgLight);
+  transform: var(--skew);
+  transition: var(--transAll);
+}
+
+.agent:is(:hover, :focus) .card-img::before {
+  width: 145%;
+}
+
+.agent:active .card-img::before {
+  width: 145%;
+}
+
+.agent h2 {
+  font-size: 32px;
+}
+
+.agent .card-info {
+  font-size: 16px;
+}
+
+.agent-class-img {
+  height: 12px;
+  margin-right: 4px;
+}

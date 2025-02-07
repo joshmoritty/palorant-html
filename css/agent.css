@@ -1,0 +1,213 @@
+@import url(./styles.css);
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.section h2 {
+  font-size: 54px;
+}
+
+#agent-class {
+  width: fit-content;
+  margin-top: 16px;
+
+  background-color: var(--accentBg);
+
+  transform: var(--skew);
+}
+
+#agent-class-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 16px 24px;
+
+  transform: var(--skewInv);
+}
+
+#agent-class-content img {
+  height: 48px;
+  margin-right: 16px;
+}
+
+#agent-role-text {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+header {
+  height: 560px;
+}
+
+#header-panel {
+  position: absolute;
+  right: -120px;
+  height: 720px;
+  width: 380px;
+  bottom: -160px;
+
+  background-color: var(--primaryBgAlpha);
+  transform: var(--skew);
+}
+
+#header-panel-logomark {
+  position: absolute;
+  opacity: 0.1;
+  right: 48px;
+  top: 48px;
+  height: 264px;
+}
+
+#header-agent {
+  position: absolute;
+  z-index: 0;
+  right: -32px;
+  bottom: -140px;
+}
+
+#header-agent-name {
+  margin-right: 60px;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: var(--primaryBgLight);
+}
+
+#header-agent-img {
+  height: 600px;
+}
+
+#abilities-header {
+  text-align: center;
+}
+
+#abilities-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1080px;
+}
+
+#abilities-main {
+  display: flex;
+}
+
+.ability-button {
+  --abilityButtonHeight: 128px;
+  --cornerClipAmt: calc(sin(var(--skewAmt) * -1) * var(--abilityButtonHeight));
+  display: flex;
+  justify-content: center;
+  width: 300px;
+  height: var(--abilityButtonHeight);
+  padding: 16px;
+
+  clip-path: polygon(
+    var(--cornerClipAmt) 0,
+    100% 0,
+    100% 100%,
+    var(--cornerClipAmt) 100%
+  );
+
+  font-weight: normal;
+  background-color: var(--primaryBgDark);
+  border: none;
+  transform: skew(0);
+}
+
+.ability-button:not(.active):is(:hover, :focus),
+.ability-button.active:is(:focus) {
+  color: inherit;
+}
+
+.ability-button.active {
+  clip-path: polygon(var(--cornerClipAmt) 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.ability-button:not(:first-child) {
+  margin-top: 2px;
+}
+
+.ability-button::before {
+  left: 16px;
+  transform: var(--skew);
+  background-color: var(--primaryBg);
+}
+
+.button.ability-button:not(.active):is(:hover, :focus, :active)::before,
+.button.ability-button.active::before {
+  width: 105%;
+}
+
+.ability-button:not(.active):is(:hover, :focus)::before {
+  background-color: var(--primaryBgMedium);
+}
+
+.button.ability-button:is(:active, .active)::before {
+  background-color: var(--primaryBg);
+}
+
+.ability-button div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: var(--cornerClipAmt);
+
+  text-align: center;
+  transform: none;
+}
+
+.ability-button:not(:active):is(:hover, :focus) div,
+.ability-button.active div {
+  transform: scale(1.1);
+}
+
+.ability-button img {
+  width: 48px;
+  margin-bottom: 8px;
+}
+
+#abilities-content {
+  --cornerClipAmt: 128px;
+  flex-grow: 1;
+  width: 100%;
+  z-index: 5;
+  padding: 48px 64px 0;
+  margin-left: -1px;
+  background-color: var(--primaryBg);
+
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - var(--cornerClipAmt)),
+    calc(100% - sin(var(--skewAmt)) * -1 * var(--cornerClipAmt)) 100%,
+    0 100%
+  );
+}
+
+.ability-content {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ability-content.active {
+  display: flex;
+  animation: fade var(--transDurLong);
+}
+
+.ability-content video {
+  width: 100%;
+  margin-bottom: 16px;
+  max-width: 560px;
+}
+
+.ability-content p {
+  margin-bottom: 0;
+  text-align: center;
+  max-width: 560px;
+}

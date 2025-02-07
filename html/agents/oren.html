@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oren - PALORANT</title>
+    <link rel="stylesheet" href="../../css/agent.css" />
+    <script src="../../js/abilities-container.js" async></script>
+    <link rel="icon" href="../../resources/img/favicon.ico" sizes="any" />
+    <link
+      rel="icon"
+      href="../../resources/img/favicon.svg"
+      type="image/svg+xml"
+    />
+  </head>
+  <body>
+    <header id="top-nav">
+      <a href="../index.html" id="top-nav-logotype">
+        <img src="../../resources/img/PalorantLogotype.svg" height="24px" />
+      </a>
+      <nav>
+        <a href="../agents.html" class="button">
+          <span>AGENTS</span>
+        </a>
+        <a href="../maps.html" class="button">
+          <span>MAPS</span>
+        </a>
+        <a href="../news.html" class="button">
+          <span>NEWS</span>
+        </a>
+        <a href="../report-bugs.html" class="button">
+          <span>REPORT BUGS</span>
+        </a>
+      </nav>
+    </header>
+    <main>
+      <header>
+        <div id="header-content">
+          <div id="header-panel">
+            <img
+              id="header-panel-logomark"
+              src="../../resources/img/PalorantLogogram.svg"
+            />
+          </div>
+          <div id="header-agent">
+            <img
+              id="header-agent-img"
+              src="../../resources/img/agents/Omen_Artwork_Full.webp"
+            />
+          </div>
+          <h1>OREN</h1>
+          <div id="agent-class">
+            <div id="agent-class-content">
+              <img
+                src="../../resources/img/agents/ControllerClassSymbolDark.webp"
+              />
+              <div>
+                <div>ROLE</div>
+                <div id="agent-role-text">CONTROLLER</div>
+              </div>
+            </div>
+          </div>
+          <p>
+            A phantom of a memory, Oren hunts in the shadows. He renders enemies
+            blind, teleports across the field, then lets paranoia take hold as
+            his foe scrambles to learn where he might strike next.
+          </p>
+        </div>
+      </header>
+      <section class="section">
+        <div id="abilities-container">
+          <h2 id="abilities-header">ABILITIES</h2>
+          <div id="abilities-main">
+            <div id="abilities-buttons">
+              <button
+                id="ability-1-button"
+                class="button ability-button active"
+                disabled
+              >
+                <div>
+                  <img
+                    src="../../resources/img/agents/oren/Shrouded_Step.webp"
+                  />
+                  SHROUDED STEP
+                </div>
+              </button>
+              <button id="ability-2-button" class="button ability-button">
+                <div>
+                  <img src="../../resources/img/agents/oren/Paranoia.webp" />
+                  PARANOIA
+                </div>
+              </button>
+              <button id="ability-3-button" class="button ability-button">
+                <div>
+                  <img src="../../resources/img/agents/oren/Dark_Cover.webp" />
+                  DARK COVER
+                </div>
+              </button>
+              <button id="ability-4-button" class="button ability-button">
+                <div>
+                  <img
+                    src="../../resources/img/agents/oren/From_the_Shadows.webp"
+                  />
+                  FROM THE SHADOWS
+                </div>
+              </button>
+            </div>
+            <div id="abilities-content">
+              <div id="ability-1" class="ability-content active">
+                <video
+                  src="../../resources/video/agents/oren/Shrouded_Step.mp4"
+                  autoplay
+                  muted
+                  loop
+                ></video>
+                <p>
+                  EQUIP a shrouded step ability and see its range indicator.
+                  FIRE to begin a brief channel, then teleport to the marked
+                  location.
+                </p>
+              </div>
+              <div id="ability-2" class="ability-content">
+                <video
+                  src="../../resources/video/agents/oren/Paranoia.mp4"
+                  autoplay
+                  muted
+                  loop
+                ></video>
+                <p>
+                  EQUIP a blinding orb. FIRE to throw it forward, briefly
+                  Nearsighting and Deafening all players it touches. This
+                  projectile can pass straight through walls.
+                </p>
+              </div>
+              <div id="ability-3" class="ability-content">
+                <video
+                  src="../../resources/video/agents/oren/Dark_Cover.mp4"
+                  autoplay
+                  muted
+                  loop
+                ></video>
+                <p>
+                  EQUIP a shadow orb, entering a phased world to place and
+                  target the orbs. PRESS the ability key to throw the shadow orb
+                  to the marked location, creating a long-lasting shadow sphere
+                  that blocks vision. HOLD FIRE while targeting to move the
+                  marker further away. HOLD ALT FIRE while targeting to move the
+                  marker closer.
+                </p>
+              </div>
+              <div id="ability-4" class="ability-content">
+                <video
+                  src="../../resources/video/agents/oren/From_The_Shadows.mp4"
+                  autoplay
+                  muted
+                  loop
+                ></video>
+                <p>
+                  EQUIP a tactical map. FIRE to begin teleporting to the
+                  selected location. While teleporting, Oren will appear as a
+                  Shade that can be destroyed by an enemy to cancel his
+                  teleport, or PRESS EQUIP for Oren to cancel his teleport.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div>
+        <p>GIOT GAMES</p>
+        <p>Los Angeles, California</p>
+      </div>
+      <div id="inspiration">
+        <p>Inspired by VALORANT by RIOT GAMES.</p>
+        <p>All game assets and gameplay footage courtesy of Riot Games, Inc.</p>
+      </div>
+    </footer>
+  </body>
+</html>
