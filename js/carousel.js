@@ -50,6 +50,12 @@ selectors.forEach((b) =>
   })
 );
 
+if (
+  slides.length > 1
+) {
+  nextButton.removeAttribute("disabled");
+}
+
 prevButton.addEventListener("click", () => {
   if (activeSlide === 0) return;
 
@@ -71,10 +77,10 @@ nextSelectorButton.addEventListener("click", () => {
 });
 
 if (
-  Math.abs(selectorContainer.scrollWidth - selectorContainer.clientWidth) <
+  Math.abs(selectorContainer.scrollWidth - selectorContainer.clientWidth) >
   0.001
 ) {
-  nextSelectorButton.setAttribute("disabled", "");
+  nextSelectorButton.removeAttribute("disabled");
 }
 
 selectorContainer.addEventListener("scroll", () => {
