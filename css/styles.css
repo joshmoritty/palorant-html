@@ -132,8 +132,12 @@ button {
 }
 
 #top-nav-logotype {
+  display: flex;
+  gap: 12px;
+  align-items: center;
   transform: var(--skewInv);
   margin-left: 32px;
+
   transition: var(--transAll);
 }
 
