@@ -285,6 +285,7 @@ main header {
 
 main header.dark {
   color: var(--primaryFg);
+  text-shadow: 0 2px 8px var(--primaryBgDark);
 }
 
 #header-bg {
