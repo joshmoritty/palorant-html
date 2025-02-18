@@ -98,7 +98,7 @@ header {
 }
 
 .ability-button {
-  --abilityButtonHeight: 128px;
+  --abilityButtonHeight: 132px;
   --cornerClipAmt: calc(sin(var(--skewAmt) * -1) * var(--abilityButtonHeight));
   display: flex;
   justify-content: center;
