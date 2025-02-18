@@ -382,6 +382,7 @@ header.dark #breadcrumb a:hover {
   position: relative;
   gap: 64px;
   padding: 64px;
+  overflow: hidden;
 
   clip-path: polygon(
     0 var(--cornerClipAmt),
