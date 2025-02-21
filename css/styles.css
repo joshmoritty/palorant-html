@@ -136,21 +136,109 @@ a:is(:focus, :active) {
   justify-content: space-between;
   align-items: center;
   height: 64px;
-  overflow: hidden;
 
   background-color: var(--primaryBgDarkAlpha);
   backdrop-filter: var(--blur);
   transform: var(--skew);
 }
 
-#top-nav nav {
+#top-nav-links {
   display: flex;
   align-items: center;
   height: 100%;
   transform: var(--skewInv);
 }
 
-#top-nav-logotype {
+#sidebar-button {
+  display: none;
+  position: absolute;
+  left: 16px;
+  padding: 0 4px;
+  height: 32px;
+
+  color: var(--primaryFgDark);
+  background: none;
+  transition: var(--transAll);
+}
+
+#sidebar-button:is(:focus, :active) {
+  color: var(--accentBg);
+}
+
+#sidebar-button svg {
+  height: 100%;
+}
+
+#sidebar {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: -240px;
+  width: 100%;
+  max-width: 240px;
+  height: 100vh;
+  padding-top: 64px;
+
+  background-color: var(--primaryBg);
+  backdrop-filter: var(--blur);
+  transition: var(--transAll);
+}
+
+#sidebar-overlay {
+  display: none;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+
+  opacity: 0;
+  pointer-events: none;
+  background-color: var(--primaryBgDarkAlpha);
+  transition: var(--transAll);
+}
+
+#sidebar-logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+#sidebar-links {
+  display: flex;
+  flex-direction: column;
+  border-top: var(--borderSize) solid var(--primaryBgLight);
+}
+
+#sidebar-links .button {
+  width: 100%;
+
+  transform: none;
+  background: none;
+  border-width: 0 0 var(--borderSize) 0;
+  border-color: var(--primaryBgLight);
+}
+
+#sidebar-links .button span {
+  transform: none;
+}
+
+#sidebar-links .button::before {
+  left: -10px;
+  transform: var(--skew);
+}
+
+#sidebar-links .button:not(.disabled):is(:active, :focus, :hover)::before {
+  width: 110%;
+}
+
+#sidebar-links .button.disabled {
+  background-color: var(--primaryBgLight);
+}
+
+#top-nav-logo {
   display: flex;
   gap: 12px;
   align-items: center;
@@ -160,11 +248,11 @@ a:is(:focus, :active) {
   transition: var(--transAll);
 }
 
-#top-nav-logotype:not(:active, .disabled):is(:hover, :focus) {
+#top-nav-logo:not(:active, .disabled):is(:hover, :focus) {
   transform: var(--skewInv) scale(1.05);
 }
 
-#top-nav-logotype:is(:active, :focus) {
+#top-nav-logo:is(:active, :focus) {
   background: none;
 }
 
@@ -223,16 +311,16 @@ a:is(:focus, :active) {
   background-color: var(--accentFg);
 }
 
-nav .button {
+#top-nav-links .button {
   background: none;
 }
 
-nav .button::before {
+#top-nav-links .button::before {
   height: 0%;
   width: 100%;
 }
 
-nav .button:not(.disabled, :disabled):is(:hover, :focus)::before {
+#top-nav-links .button:not(.disabled, :disabled):is(:hover, :focus)::before {
   height: 100%;
 }
 
@@ -245,17 +333,17 @@ nav .button:not(.disabled, :disabled):is(:hover, :focus)::before {
   transform: var(--skewInv) scale(1.1);
 }
 
-nav .button {
+#top-nav-links .button {
   height: 100%;
   border-width: 0 0 0 var(--borderSize);
   border-color: var(--primaryBg);
 }
 
-nav .button:not(.disabled, :disabled):active {
+#top-nav-links .button:not(.disabled, :disabled):active {
   border-color: var(--primaryBg);
 }
 
-nav .button:is(.disabled, :disabled) {
+#top-nav-links .button:is(.disabled, :disabled) {
   background-color: var(--primaryBg);
 }
 
@@ -559,4 +647,48 @@ footer p {
   font-weight: bold;
   color: var(--primaryFgDark);
   padding: 0 8px;
+}
+
+@media (max-width: 768px) {
+  #top-nav {
+    justify-content: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: none;
+  }
+
+  #top-nav-links {
+    display: none;
+  }
+
+  #top-nav-logo {
+    transform: none;
+    margin: 0;
+  }
+
+  #top-nav-logo:not(:active, .disabled):is(:hover, :focus) {
+    transform: scale(1.05);
+  }
+
+  #sidebar {
+    display: block;
+  }
+
+  #sidebar.open {
+    left: 0;
+  }
+
+  #sidebar-overlay {
+    display: block;
+  }
+
+  #sidebar-overlay.open {
+    opacity: 1;
+    pointer-events: unset;
+  }
+
+  #sidebar-button {
+    display: block;
+  }
 }
