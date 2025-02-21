@@ -164,6 +164,10 @@ a:is(:focus, :active) {
   transform: var(--skewInv) scale(1.05);
 }
 
+#top-nav-logotype:is(:active, :focus) {
+  background: none;
+}
+
 .button {
   position: relative;
   display: flex;
