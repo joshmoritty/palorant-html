@@ -113,6 +113,15 @@ figure img {
   width: 100%;
 }
 
+a:hover {
+  text-decoration-thickness: 3px;
+}
+
+a:is(:focus, :active) {
+  color: var(--secondaryFg);
+  background-color: var(--accentBg);
+}
+
 #top-nav {
   position: fixed;
   margin-left: auto;
@@ -338,21 +347,15 @@ main header.dark {
 }
 
 #breadcrumb a {
-  color: var(--accentFgDark);
-  text-decoration: none;
+  color: var(--secondaryFg);
 }
 
 header.dark #breadcrumb a {
   color: var(--accentFg);
 }
 
-#breadcrumb a:hover {
+header.dark #breadcrumb a:is(:focus, :active) {
   color: var(--secondaryFg);
-  text-decoration: underline;
-}
-
-header.dark #breadcrumb a:hover {
-  color: var(--primaryFg);
 }
 
 #breadcrumb:not(:last-child)::after {
@@ -465,6 +468,11 @@ footer p {
   text-decoration: none;
 
   transition: var(--transAll);
+}
+
+.card:is(:focus, :active) {
+  color: var(--primaryFg);
+  background-color: var(--primaryBgDark);
 }
 
 .card-img {
