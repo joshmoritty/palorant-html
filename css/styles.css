@@ -691,4 +691,8 @@ footer p {
   #sidebar-button {
     display: block;
   }
+
+  #top-nav-logotype {
+    display: none;
+  }
 }
