@@ -1,7 +1,7 @@
 @import url(./styles.css);
 
 .agents-container {
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
 .agent .card-img {
@@ -43,10 +43,16 @@
 }
 
 .agent .card-info {
-  font-size: var(--fontSizeNormal);
+  font-size: var(--fontSizeSmall);
 }
 
 .agent-class-img {
-  height: 12px;
+  height: var(--fontSizeTiny);
   margin-right: 4px;
+}
+
+@media (max-width: 768px) {
+  .agent .card-img {
+    height: 200px;
+  }
 }

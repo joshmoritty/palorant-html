@@ -1,9 +1,5 @@
 @import url(./styles.css);
 
-.maps-container {
-  grid-template-columns: repeat(2, 1fr);
-}
-
 .map h2 {
   font-size: var(--fontSizeLarger);
   margin: 0;

@@ -134,6 +134,7 @@
 
 #news .card-container {
   padding: 0 var(--spacingMedium);
+  grid-template-columns: repeat(3, 240px);
 }
 
 #news h2 {
