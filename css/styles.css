@@ -453,16 +453,13 @@ main header.dark {
   text-decoration: none;
 }
 
-#breadcrumb a:hover {
+#breadcrumb a:is(:hover, :focus, :active) {
   text-decoration: underline;
+  background: none;
 }
 
 header.dark #breadcrumb a {
   color: var(--accentFg);
-}
-
-header.dark #breadcrumb a:is(:focus, :active) {
-  color: var(--primaryFg);
 }
 
 #breadcrumb:not(:last-child)::after {
