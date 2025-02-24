@@ -139,10 +139,10 @@
   max-width: 400px;
   clip-path: polygon(
     0 var(--cornerClipAmt),
-    calc(sin(var(--skewAmt)) * -1 * var(--cornerClipAmt)) 0,
+    calc(tan(var(--skewAmt)) * -1 * var(--cornerClipAmt)) 0,
     100% 0,
     100% calc(100% - var(--cornerClipAmt)),
-    calc(100% - sin(var(--skewAmt)) * -1 * var(--cornerClipAmt)) 100%,
+    calc(100% - tan(var(--skewAmt)) * -1 * var(--cornerClipAmt)) 100%,
     0 100%
   );
 }
