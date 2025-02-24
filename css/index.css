@@ -128,6 +128,12 @@
 #news .section-container {
   flex-direction: column;
   gap: var(--spacingSmall);
+  padding-left: 0;
+  padding-right: 0;
+}
+
+#news .card-container {
+  padding: 0 var(--spacingMedium);
 }
 
 #news h2 {
