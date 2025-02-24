@@ -10,6 +10,10 @@
   font-size: var(--fontSizeLarge);
 }
 
+.checkbox label {
+  font-size: var(--fontSizeNormal);
+}
+
 .form-section:not(.checkbox) label {
   display: block;
   margin-bottom: 8px;
@@ -20,7 +24,7 @@
   padding: 8px;
 
   border: solid var(--borderSize) var(--primaryBgLight);
-  font-size: var(--fontSizeLarge);
+  font-size: var(--fontSizeNormal);
   font-family: inherit;
 
   color: var(--primaryFg);
