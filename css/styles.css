@@ -64,6 +64,10 @@
   --fontSizeSmall: 14px;
   --fontSizeTiny: 12px;
 
+  --spacingMedium: 64px;
+  --spacingSmall: 32px;
+  --spacingTiny: 16px;
+
   scroll-behavior: smooth;
   color-scheme: dark;
 }
@@ -93,11 +97,11 @@ h2 {
 }
 
 h1 {
-  margin-bottom: 32px;
+  margin-bottom: var(--spacingSmall);
 }
 
 h2 {
-  margin-bottom: 16px;
+  margin-bottom: var(--spacingTiny);
 }
 
 p,
@@ -113,7 +117,7 @@ button {
 }
 
 figure {
-  margin: 32px 0px;
+  margin: var(--spacingSmall) 0px;
 }
 
 figure img {
@@ -362,7 +366,7 @@ a.button {
 .section {
   display: flex;
   justify-content: center;
-  padding: 36px;
+  padding: 32px;
 
   background-image: url("../resources/img/background-dark.svg");
   background-size: cover;
@@ -434,7 +438,7 @@ main header.dark {
   z-index: 5;
   width: 100%;
   max-width: 1080px;
-  padding: 0 64px;
+  padding: 0 var(--spacingMedium);
 }
 
 #breadcrumbs-container ol {
@@ -470,7 +474,7 @@ header.dark #breadcrumb a:is(:focus, :active) {
   z-index: 5;
   width: 100%;
   max-width: 1080px;
-  padding: 36px 64px;
+  padding: var(--spacingSmall) var(--spacingMedium);
 }
 
 #header-content h1 {
@@ -488,8 +492,8 @@ header.dark #breadcrumb a:is(:focus, :active) {
   width: 100%;
   max-width: 1080px;
   position: relative;
-  gap: 64px;
-  padding: 64px;
+  gap: var(--spacingMedium);
+  padding: var(--spacingMedium);
   overflow: hidden;
 
   clip-path: polygon(
@@ -513,7 +517,7 @@ header.dark #breadcrumb a:is(:focus, :active) {
 }
 
 .section-content .button {
-  margin-top: 32px;
+  margin-top: var(--spacingSmall);
 }
 
 .section-content.center {
@@ -522,7 +526,7 @@ header.dark #breadcrumb a:is(:focus, :active) {
 }
 
 footer {
-  padding: 32px 0;
+  padding: var(--spacingSmall) 0;
   font-size: var(--fontSizeTiny);
   text-align: center;
 }
@@ -539,7 +543,7 @@ footer p {
 .card-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
+  gap: var(--spacingSmall);
   width: 100%;
 }
 
@@ -662,6 +666,10 @@ footer p {
     --fontSizeNormal: 16px;
     --fontSizeSmall: 12px;
     --fontSizeTiny: 10px;
+
+    --spacingMedium: 32px;
+    --spacingSmall: 16px;
+    --spacingTiny: 8px;
   }
 
   #top-nav {

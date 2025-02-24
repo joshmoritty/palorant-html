@@ -87,7 +87,7 @@
 
 #header-content {
   justify-content: center;
-  padding: 0 64px 0;
+  padding: 0 var(--spacingMedium) 0;
   height: 100%;
 }
 
@@ -97,7 +97,7 @@
   align-items: center;
   height: fit-content;
   width: fit-content;
-  margin-left: 64px;
+  margin-left: var(--spacingMedium);
 }
 
 #hero .section-content img {
@@ -105,7 +105,8 @@
 }
 
 .section {
-  padding: 96px;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 
 .section h2 {
@@ -125,7 +126,7 @@
 
 #news .section-container {
   flex-direction: column;
-  gap: 32px;
+  gap: var(--spacingSmall);
 }
 
 #news h2 {

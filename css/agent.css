@@ -176,7 +176,7 @@ header {
   flex-grow: 1;
   width: 100%;
   z-index: 5;
-  padding: 48px 64px 0;
+  padding: var(--spacingSmall) var(--spacingMedium) 0;
   margin-left: -1px;
   background-color: var(--primaryBg);
 
