@@ -492,7 +492,6 @@ header.dark #breadcrumb a:is(:focus, :active) {
   width: 100%;
   max-width: 1080px;
   position: relative;
-  gap: var(--spacingMedium);
   padding: var(--spacingMedium);
   overflow: hidden;
 
