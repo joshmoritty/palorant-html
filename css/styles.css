@@ -675,8 +675,8 @@ footer p {
     --fontSizeTiny: 10px;
 
     --spacingMedium: 32px;
-    --spacingSmall: 16px;
-    --spacingTiny: 8px;
+    --spacingSmall: 24px;
+    --spacingTiny: 16px;
   }
 
   #top-nav {
