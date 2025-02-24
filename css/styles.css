@@ -726,4 +726,17 @@ footer p {
     padding-left: 0;
     padding-right: 0;
   }
+
+  .section-container {
+    --cornerClipAmt: 32px;
+
+    clip-path: polygon(
+      0 var(--cornerClipAmt),
+      var(--cornerClipAmt) 0,
+      100% 0,
+      100% calc(100% - var(--cornerClipAmt)),
+      calc(100% - var(--cornerClipAmt)) 100%,
+      0 100%
+    );
+  }
 }
