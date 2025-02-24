@@ -126,11 +126,11 @@ figure img {
 }
 
 a:hover {
-  text-decoration-thickness: 3px;
+  text-decoration: none;
 }
 
 a:is(:focus, :active) {
-  color: var(--secondaryFg);
+  color: var(--primaryFg);
   background-color: var(--accentBg);
 }
 
@@ -450,6 +450,11 @@ main header.dark {
 
 #breadcrumb a {
   color: var(--secondaryFg);
+  text-decoration: none;
+}
+
+#breadcrumb a:hover {
+  text-decoration: underline;
 }
 
 header.dark #breadcrumb a {
@@ -457,7 +462,7 @@ header.dark #breadcrumb a {
 }
 
 header.dark #breadcrumb a:is(:focus, :active) {
-  color: var(--secondaryFg);
+  color: var(--primaryFg);
 }
 
 #breadcrumb:not(:last-child)::after {
