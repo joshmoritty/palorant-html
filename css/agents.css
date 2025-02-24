@@ -39,11 +39,11 @@
 }
 
 .agent h2 {
-  font-size: 32px;
+  font-size: var(--fontSizeLarger);
 }
 
 .agent .card-info {
-  font-size: 16px;
+  font-size: var(--fontSizeNormal);
 }
 
 .agent-class-img {

@@ -71,13 +71,13 @@
 
 #header-agent-name {
   margin-right: 60px;
-  font-size: 20px;
+  font-size: var(--fontSizeLarge);
   font-weight: bold;
   background-color: var(--primaryBgLight);
 }
 
 #header-agent-award {
-  font-size: 12px;
+  font-size: var(--fontSizeTiny);
   background-color: var(--primaryBgLightAlpha);
 }
 
@@ -109,11 +109,11 @@
 }
 
 .section h2 {
-  font-size: 54px;
+  font-size: var(--fontSizeHuge);
 }
 
 .cta {
-  font-size: 24px;
+  font-size: var(--fontSizeLarge);
 }
 
 .section-container {

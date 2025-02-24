@@ -56,6 +56,14 @@
   --blur: blur(8px);
   --borderSize: 2px;
 
+  --fontSizeHeader: 72px;
+  --fontSizeHuge: 54px;
+  --fontSizeLarger: 32px;
+  --fontSizeLarge: 20px;
+  --fontSizeNormal: 18px;
+  --fontSizeSmall: 14px;
+  --fontSizeTiny: 12px;
+
   scroll-behavior: smooth;
   color-scheme: dark;
 }
@@ -76,7 +84,7 @@ body {
   color: var(--primaryFg);
   background-color: var(--primaryBgDark);
   font-family: var(--font);
-  font-size: 16px;
+  font-size: var(--fontSizeNormal);
 }
 
 h1,
@@ -266,7 +274,7 @@ a:is(:focus, :active) {
   overflow: hidden;
 
   color: var(--primaryFg);
-  font-size: 20px;
+  font-size: var(--fontSizeLarge);
   font-weight: bold;
 
   background-color: var(--accentBgDark);
@@ -427,8 +435,6 @@ main header.dark {
   width: 100%;
   max-width: 1080px;
   padding: 0 64px;
-
-  font-size: 18px;
 }
 
 #breadcrumbs-container ol {
@@ -465,14 +471,12 @@ header.dark #breadcrumb a:is(:focus, :active) {
   width: 100%;
   max-width: 1080px;
   padding: 36px 64px;
-
-  font-size: 18px;
 }
 
 #header-content h1 {
   margin: 0;
 
-  font-size: 72px;
+  font-size: var(--fontSizeHeader);
 }
 
 #header-content p {
@@ -519,7 +523,7 @@ header.dark #breadcrumb a:is(:focus, :active) {
 
 footer {
   padding: 32px 0;
-  font-size: 12px;
+  font-size: var(--fontSizeTiny);
   text-align: center;
 }
 
@@ -623,18 +627,18 @@ footer p {
   margin-top: 0;
   margin-bottom: 8px;
 
-  font-size: 18px;
+  font-size: var(--fontSizeNormal);
 }
 
 .card-content p {
   margin: 8px 0;
 
-  font-size: 14px;
+  font-size: var(--fontSizeSmall);
 }
 
 .card-info {
   color: var(--primaryFgDark);
-  font-size: 12px;
+  font-size: var(--fontSizeTiny);
   transition: var(--transAll);
 }
 
@@ -650,6 +654,16 @@ footer p {
 }
 
 @media (max-width: 768px) {
+  :root {
+    --fontSizeHeader: 36px;
+    --fontSizeHuge: 36px;
+    --fontSizeLarger: 24px;
+    --fontSizeLarge: 18px;
+    --fontSizeNormal: 16px;
+    --fontSizeSmall: 12px;
+    --fontSizeTiny: 10px;
+  }
+
   #top-nav {
     justify-content: center;
     top: 0;

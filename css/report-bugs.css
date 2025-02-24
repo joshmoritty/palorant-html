@@ -7,7 +7,7 @@
 }
 
 .form-section label {
-  font-size: 20px;
+  font-size: var(--fontSizeLarge);
 }
 
 .form-section:not(.checkbox) label {
@@ -20,7 +20,7 @@
   padding: 8px;
 
   border: solid var(--borderSize) var(--primaryBgLight);
-  font-size: 20px;
+  font-size: var(--fontSizeLarge);
   font-family: inherit;
 
   color: var(--primaryFg);

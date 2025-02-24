@@ -14,10 +14,6 @@ article section, #article-info {
   margin-right: auto;
 }
 
-article :is(p, ul, ol) {
-  font-size: 18px;
-}
-
 #news {
   padding-top: 0;
 }
@@ -31,5 +27,5 @@ article :is(p, ul, ol) {
 
 #news h2 {
   margin: 0;
-  font-size: 54px;
+  font-size: var(--fontSizeHuge);
 }

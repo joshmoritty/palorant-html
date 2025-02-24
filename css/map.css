@@ -1,7 +1,7 @@
 @import url(./styles.css);
 
 .section h2 {
-  font-size: 54px;
+  font-size: var(--fontSizeHuge);
 }
 
 #header-content {

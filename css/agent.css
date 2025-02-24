@@ -10,7 +10,7 @@
 }
 
 .section h2 {
-  font-size: 54px;
+  font-size: var(--fontSizeHuge);
 }
 
 #agent-class {
@@ -37,7 +37,7 @@
 }
 
 #agent-role-text {
-  font-size: 24px;
+  font-size: var(--fontSizeLarge);
   font-weight: bold;
 }
 
@@ -73,7 +73,7 @@ header {
 
 #header-agent-name {
   margin-right: 60px;
-  font-size: 20px;
+  font-size: var(--fontSizeLarge);
   font-weight: bold;
   background-color: var(--primaryBgLight);
 }
