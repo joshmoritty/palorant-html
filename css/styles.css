@@ -724,6 +724,7 @@ footer p {
 
   .section-container {
     --cornerClipAmt: 32px;
+    flex-direction: column;
 
     clip-path: polygon(
       0 var(--cornerClipAmt),
@@ -733,5 +734,9 @@ footer p {
       calc(100% - var(--cornerClipAmt)) 100%,
       0 100%
     );
+  }
+
+  .reverse-section .section-container {
+    flex-direction: column;
   }
 }
