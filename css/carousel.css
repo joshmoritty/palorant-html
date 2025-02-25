@@ -184,3 +184,9 @@
 .carousel-selector.active img {
   transform: scale(1.1);
 }
+
+@media (max-width: 768px) {
+  :is(.carousel-prev, .carousel-next):not(:disabled) {
+    display: block;
+  }
+}
