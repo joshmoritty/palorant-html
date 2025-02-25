@@ -16,7 +16,7 @@
 
 #header-minimap-img {
   --cornerClipAmt: 64px;
-  max-width: 480px;
+  max-width: 360px;
   clip-path: polygon(
     0 var(--cornerClipAmt),
     calc(tan(var(--skewAmt)) * -1 * var(--cornerClipAmt)) 0,
