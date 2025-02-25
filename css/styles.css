@@ -257,11 +257,11 @@ a:is(:focus, :active) {
   transform: var(--skewInv);
   margin-left: 32px;
 
-  transition: var(--transAll);
+  transition: scale var(--transDur);
 }
 
 #top-nav-logo:not(:active, .disabled):is(:hover, :focus) {
-  transform: var(--skewInv) scale(1.05);
+  scale: 1.05;
 }
 
 #top-nav-logo:is(:active, :focus) {
@@ -690,10 +690,6 @@ footer p {
   #top-nav-logo {
     transform: none;
     margin: 0;
-  }
-
-  #top-nav-logo:not(:active, .disabled):is(:hover, :focus) {
-    transform: scale(1.05);
   }
 
   #sidebar {
