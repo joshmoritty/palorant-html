@@ -76,7 +76,7 @@
 }
 
 .error-message.visible {
-  max-height: 32px;
+  max-height: 36px;
 }
 
 .optional::after {
