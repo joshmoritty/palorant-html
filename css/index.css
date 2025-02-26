@@ -60,6 +60,7 @@
 }
 
 #hero .section-content {
+  flex: unset;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -92,6 +93,11 @@
   align-items: center;
   overflow: hidden;
   gap: var(--spacingMedium);
+  flex-wrap: wrap;
+}
+
+.section-content {
+  flex: 2 1 400px;
 }
 
 #news .section-container {
@@ -110,10 +116,13 @@
   margin: 0;
 }
 
+#gameplay-wrapper {
+  flex: 1 1 360px;
+}
+
 #gameplay-vid {
   --cornerClipAmt: 64px;
   width: 100%;
-  max-width: 400px;
   clip-path: polygon(
     0 var(--cornerClipAmt),
     calc(tan(var(--skewAmt)) * -1 * var(--cornerClipAmt)) 0,
@@ -124,34 +133,35 @@
   );
 }
 
+#meet-the-agents .section-container {
+  gap: var(--spacingSmall);
+}
+
+#know-the-maps .section-container {
+  gap: 0;
+}
+
 #agents-wrapper,
 #map-wrapper {
-  width: 100%;
+  flex: 1 1 440px;
+  align-self: flex-end;
+  margin-bottom: calc(-1 * var(--spacingMedium));
 }
 
 #agents-wrapper {
-  max-width: 400px;
+  flex-grow: 0;
 }
 
 #map-wrapper {
-  max-width: 440px;
+  margin-left: -64px;
+  margin-right: calc(var(--spacingMedium) * -1);
 }
 
 #agents-img,
 #map-img {
   display: block;
-  position: absolute;
   bottom: 0;
   width: 100%;
-}
-
-#agents-img {
-  max-width: 480px;
-  margin-left: -32px;
-}
-
-#map-img {
-  max-width: 600px;
 }
 
 @media (max-width: 768px) {
@@ -168,23 +178,6 @@
     margin: 0;
   }
 
-  .reverse-section .section-container {
-    text-align: right;
-  }
-
-  .reverse-section .section-container .button {
-    float: right;
-  }
-
-  :is(#meet-the-agents, #know-the-maps) .section-container {
-    padding-bottom: 0;
-  }
-
-  #agents-img,
-  #map-img {
-    position: relative;
-  }
-
   #agents-wrapper {
     max-width: unset;
   }
@@ -197,7 +190,6 @@
   #map-wrapper {
     width: calc(100% + var(--spacingMedium) * 2);
     max-width: unset;
-    margin-right: calc(var(--spacingMedium) * -2);
   }
 
   #map-img {
