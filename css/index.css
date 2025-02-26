@@ -17,7 +17,8 @@
 #hero-vid {
   position: absolute;
   z-index: 0;
-  min-height: 100%;
+  object-fit: cover;
+  height: 100%;
   min-width: 100%;
 }
 
@@ -46,39 +47,6 @@
   z-index: 0;
   right: -32px;
   bottom: -140px;
-}
-
-#header-agent-desc {
-  position: absolute;
-  z-index: -1;
-  bottom: 256px;
-  right: 40px;
-  width: 200px;
-
-  transform: var(--skew);
-}
-
-#header-agent-desc p {
-  text-align: right;
-  padding: 6px 16px;
-  margin-bottom: 8px;
-}
-
-#header-agent-desc span {
-  display: block;
-  transform: var(--skewInv);
-}
-
-#header-agent-name {
-  margin-right: 60px;
-  font-size: var(--fontSizeLarge);
-  font-weight: bold;
-  background-color: var(--primaryBgLight);
-}
-
-#header-agent-award {
-  font-size: var(--fontSizeTiny);
-  background-color: var(--primaryBgLightAlpha);
 }
 
 #header-agent-img {
@@ -134,7 +102,7 @@
 
 #news .card-container {
   padding: 0 var(--spacingMedium);
-  grid-template-columns: repeat(3, 240px);
+  grid-template-columns: repeat(3, minmax(260px, 1fr));
 }
 
 #news h2 {
@@ -143,6 +111,7 @@
 
 #gameplay-vid {
   --cornerClipAmt: 64px;
+  width: 100%;
   max-width: 400px;
   clip-path: polygon(
     0 var(--cornerClipAmt),
@@ -169,6 +138,7 @@
 
 #agents-img,
 #map-img {
+  display: block;
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -181,4 +151,55 @@
 
 #map-img {
   max-width: 600px;
+}
+
+@media (max-width: 768px) {
+  #header-content {
+    align-items: center;
+  }
+
+  #header-panel,
+  #header-agent {
+    display: none;
+  }
+
+  #hero .section-content {
+    margin: 0;
+  }
+
+  .reverse-section .section-container {
+    text-align: right;
+  }
+
+  .reverse-section .section-container .button {
+    float: right;
+  }
+
+  :is(#meet-the-agents, #know-the-maps) .section-container {
+    padding-bottom: 0;
+  }
+
+  #agents-img,
+  #map-img {
+    position: relative;
+  }
+
+  #agents-wrapper {
+    max-width: unset;
+  }
+
+  #agents-img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #map-wrapper {
+    width: calc(100% + var(--spacingMedium) * 2);
+    max-width: unset;
+    margin-right: calc(var(--spacingMedium) * -2);
+  }
+
+  #map-img {
+    max-width: unset;
+  }
 }
