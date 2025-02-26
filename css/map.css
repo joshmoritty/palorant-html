@@ -43,4 +43,9 @@
   #header-content {
     flex-direction: column;
   }
+
+  #images .section-container {
+    flex-direction: column;
+    gap: 0;
+  }
 }
