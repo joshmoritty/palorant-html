@@ -82,6 +82,10 @@ header {
   height: 600px;
 }
 
+#header-content p {
+  width: 60%;
+}
+
 #abilities-header {
   text-align: center;
 }
@@ -176,7 +180,7 @@ header {
   flex-grow: 1;
   width: 100%;
   z-index: 5;
-  padding: var(--spacingSmall) var(--spacingMedium) 0;
+  padding: var(--spacingSmall) var(--spacingMedium);
   margin-left: -1px;
   background-color: var(--primaryBg);
 
@@ -200,6 +204,12 @@ header {
   animation: fade var(--transDurLong);
 }
 
+.ability-name {
+  display: none;
+  margin-top: 0;
+  font-size: var(--fontSizeLarger);
+}
+
 .ability-content video {
   width: 100%;
   margin-bottom: 16px;
@@ -210,4 +220,84 @@ header {
   margin-bottom: 0;
   text-align: center;
   max-width: 560px;
+}
+
+@media (max-width: 768px) {
+  #header-panel {
+    display: none;
+  }
+
+  #header-agent {
+    bottom: unset;
+    top: -80px;
+    right: 0px;
+  }
+
+  #header-agent img {
+    height: 240px;
+  }
+
+  #header-content p {
+    width: 100%;
+  }
+
+  #abilities-main {
+    flex-direction: column;
+  }
+
+  #abilities-buttons {
+    display: flex;
+  }
+
+  .ability-button {
+    clip-path: unset;
+    height: unset;
+  }
+
+  .ability-button.active {
+    clip-path: unset;
+  }
+
+  .ability-button:not(:first-child) {
+    margin-top: 0;
+    margin-left: var(--borderSize);
+  }
+
+  .ability-button div {
+    margin-left: 0;
+  }
+
+  .ability-button::before {
+    left: -35%;
+  }
+
+  .button.ability-button:not(.active):is(:hover, :focus, :active)::before,
+  .button.ability-button.active::before {
+    width: 170%;
+  }
+
+  .ability-button img {
+    margin: 0;
+  }
+
+  .ability-button-name {
+    display: none;
+  }
+
+  #abilities-content {
+    --cornerClipAmt: 32px;
+    padding: var(--spacingMedium);
+
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% calc(100% - var(--cornerClipAmt)),
+      calc(100% - var(--cornerClipAmt)) 100%,
+      0 100%
+    );
+  }
+
+  .ability-name {
+    display: block;
+  }
 }
