@@ -66,12 +66,16 @@
   align-items: center;
   height: fit-content;
   width: fit-content;
+  max-width: 100%;
   margin-left: var(--spacingMedium);
   z-index: 10;
+
+  text-align: center;
 }
 
 #hero .section-content img {
   margin-bottom: 20px;
+  width: 100%;
 }
 
 .section {
