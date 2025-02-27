@@ -131,7 +131,6 @@ a:hover {
 
 a:is(:focus, :active) {
   color: var(--primaryFg);
-  background-color: var(--accentBg);
 }
 
 #top-nav {
@@ -523,13 +522,48 @@ header.dark #breadcrumb a {
 }
 
 footer {
-  padding: var(--spacingSmall) 0;
+  padding: var(--spacingSmall);
   font-size: var(--fontSizeTiny);
   text-align: center;
 }
 
 footer p {
   margin: 6px 0;
+}
+
+#footer-nav {
+  width: 100%;
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: var(--spacingSmall);
+  margin-bottom: var(--spacingSmall);
+  border-bottom: var(--borderSize) solid var(--primaryBg);
+}
+
+#footer-nav ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  gap: var(--spacingMedium);
+  flex-wrap: wrap;
+}
+
+.footer-nav-link a {
+  text-decoration: none;
+  font-size: var(--fontSizeNormal);
+  color: var(--primaryFg);
+}
+
+.footer-nav-link:is(:hover, :focus, :active) a {
+  text-decoration: underline;
+}
+
+#footer-company {
+  font-size: var(--fontSizeNormal);
+  font-weight: bold;
 }
 
 #inspiration {
