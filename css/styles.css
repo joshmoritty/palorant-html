@@ -35,7 +35,7 @@
   --primaryBgMedium: #181e2b;
   --primaryBgDark: #0f1115;
   --primaryBgDarkAlpha: rgba(15, 17, 21, 0.75);
-  --primaryBgDarkTransparent: rgba(15, 17, 21, 0);
+  --primaryBgDarkTranslucent: rgba(15, 17, 21, 0.4);
   --primaryBgLight: #394567;
   --primaryBgLightAlpha: rgba(57, 69, 103, 0.75);
   --secondaryFg: #181a20;
@@ -428,8 +428,8 @@ main header.dark {
 
   background-image: linear-gradient(
     var(--primaryBgDark),
-    var(--primaryBgDarkTransparent),
-    var(--primaryBgDark)
+    var(--primaryBgDarkTranslucent) 40%,
+    var(--primaryBgDarkAlpha)
   );
 }
 
@@ -762,6 +762,14 @@ footer p {
       100% calc(100% - var(--cornerClipAmt)),
       calc(100% - var(--cornerClipAmt)) 100%,
       0 100%
+    );
+  }
+
+  #header-overlay {
+    background-image: linear-gradient(
+      var(--primaryBgDark),
+      var(--primaryBgDarkTranslucent) 70%,
+      var(--primaryBgDarkAlpha)
     );
   }
 }
