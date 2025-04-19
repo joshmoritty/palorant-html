@@ -12,10 +12,12 @@
 
 #header-minimap {
   z-index: 5;
+  max-width: 100%;
 }
 
 #header-minimap-img {
   --cornerClipAmt: 64px;
+  width: 100%;
   max-width: 360px;
   clip-path: polygon(
     0 var(--cornerClipAmt),
