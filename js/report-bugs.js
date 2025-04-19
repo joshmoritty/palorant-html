@@ -149,6 +149,10 @@ desc.validate = () => {
 };
 
 followUp.validate = () => {
+  if (!followUp.checked) {
+    return "Please check the box to proceed";
+  }
+
   return "";
 };
 
