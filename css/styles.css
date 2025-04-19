@@ -1,26 +1,26 @@
 @font-face {
-  src: url("../resources/font/Exo2-Regular.ttf");
+  src: url("../resources/font/exo2-regular.ttf");
   font-family: "Exo 2";
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  src: url("../resources/font/Exo2-Italic.ttf");
+  src: url("../resources/font/exo2-italic.ttf");
   font-family: "Exo 2";
   font-weight: normal;
   font-style: italic;
 }
 
 @font-face {
-  src: url("../resources/font/Exo2-Bold.ttf");
+  src: url("../resources/font/exo2-bold.ttf");
   font-family: "Exo 2";
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
-  src: url("../resources/font/Exo2-BoldItalic.ttf");
+  src: url("../resources/font/exo2-bolditalic.ttf");
   font-family: "Exo 2";
   font-weight: bold;
   font-style: italic;
