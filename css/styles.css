@@ -765,3 +765,16 @@ footer p {
     );
   }
 }
+
+@media (max-width: 480px) {
+  :root {
+    --spacingMedium: 24px;
+    --spacingSmall: 16px;
+    --spacingTiny: 12px;
+  }
+
+  .section-container {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}

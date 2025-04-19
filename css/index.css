@@ -200,3 +200,18 @@
     max-width: unset;
   }
 }
+
+@media (max-width: 480px) {
+  .section {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+  
+  #meet-the-agents .section-container {
+    padding-bottom: var(--spacingMedium);
+  }
+
+  #know-the-maps .section-container {
+    padding-bottom: var(--spacingMedium);
+  }
+}
