@@ -190,3 +190,9 @@
     display: block;
   }
 }
+
+@media (max-width: 480px) {
+  .carousel-selector {
+    height: 32px;
+  }
+}
