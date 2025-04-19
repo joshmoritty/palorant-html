@@ -36,3 +36,9 @@ article section, #article-info {
   margin: 0;
   font-size: var(--fontSizeHuge);
 }
+
+@media (max-width: 480px) {
+  #article-info {
+    font-size: var(--fontSizeSmall);
+  }
+}
